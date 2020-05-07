@@ -1,5 +1,6 @@
 # Plasmid_ML
-This repository contained all the codes to build a Machine learning model to differentiate plasmid and chromosome
+This repository contained all the codes to build a Machine learning model to differentiate plasmid and chromosome.
+
 This model is used to predict a sequence origin(plasmid or chromosome) base on the kmer frequency. Typically, we used a 5000 bp sequence and calculate its 6mer frequency, which produce 2080 kmer features. The frequency matrix is fed into the model to predict the sequence origin.
 
 ## Prerequisites
