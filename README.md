@@ -11,7 +11,7 @@ The model requires the installation of Python 3.8, tensorflow 2.0, and the KMC 3
 git clone https://github.com/Xiaohui-Z/Plasmid_ML.git
 ```
 
-##Features order
+## Features order
 
 We used KMC3 to generate 6mer frequency for each sequence fragment. The “kmer_order.csv” file showed the order of 6mer type KMC3 produced (in alphabetical order), which is also the order of feature for the input CSV that used for model prediction.  
 
