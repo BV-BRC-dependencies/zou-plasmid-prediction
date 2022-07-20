@@ -11,6 +11,11 @@ The model requires the installation of Python 3.8, tensorflow 2.0, and the KMC 3
 git clone https://github.com/Xiaohui-Z/Plasmid_ML.git
 ```
 
+##Features order
+
+We used KMC3 to generate 6mer frequency for each sequence fragment. The “kmer_order.csv” file showed the order of 6mer type KMC3 produced (in alphabetical order), which is also the order of feature for the input CSV that used for model prediction.  
+
+
 ## usage
 A DNA sequence should be chopped to 5000bp and then KMC3 is used to calculate the 6mer frequency. Each row represents a sequence and each column means a 6mer type. The script model_predict.py can be used to classify the sequences based on the frequency of 6mer, containing 2080 features. The data should be csv format with header and index column. An example to predict on the testdata.csv is below
 
