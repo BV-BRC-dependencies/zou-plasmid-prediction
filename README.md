@@ -8,7 +8,7 @@ The model requires the installation of Python 3.8, tensorflow 2.0, and the KMC 3
 
 ## Installation
 ```
-git clone https://github.com/Xiaohui-Z/Plasmid_ML.git
+git clone https://github.com/BV-BRC-dependencies/zou-plasmid-prediction
 ```
 
 ## Features order
