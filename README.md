@@ -29,5 +29,5 @@ We also provide a script used to train your own model. For example, `training_da
 
 This command will train your data and get a new model named "trained_model.h5" in your working directory:
 ```
-python model_train.py model_totaldata.csv model_totaltarget.txt
+python model_train.py training_data.csv training_label.txt
 ```
