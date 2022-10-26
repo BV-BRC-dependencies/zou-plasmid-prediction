@@ -3,8 +3,9 @@ This repository contains all the code to build a Machine learning model to diffe
 
 This model is used to predict a sequence origin (plasmid or chromosome) based on the kmer frequency. Typically, we used a 5000 bp sequence and calculate its 6mer frequency, which produces 2080 kmer features. The frequency matrix is fed into the model to predict the sequence origin.
 
+
 ## Prerequisites
-The model requires the installation of Python 3.8, tensorflow 2.0, and the KMC 3.1.1 tool. KMC3 can be installed based on manual [KMC3](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=kmc&subpage=download)
+The model requires the installation of Python 3.8, tensorflow 2.0, pandas 0.24.2, NumPy 1.16.0, and the KMC 3.1.1 tool. KMC3 can be installed based on manual [KMC3](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=kmc&subpage=download). The model could be run on a laptop with 2G gpu, and a tensorflow 2.0 or above should be installed with gpu.
 
 ## Installation
 ```
@@ -17,7 +18,9 @@ We used KMC3 to generate 6mer frequency for each sequence fragment. The “kmer_
 
 
 ## usage
-A DNA sequence should be chopped to 5000bp and then KMC3 is used to calculate the 6mer frequency. Each row represents a sequence and each column means a 6mer type. The script model_predict.py can be used to classify the sequences based on the frequency of 6mer, containing 2080 features. The data should be csv format with header and index column. An example to predict on the testdata.csv is below
+model_predict.py is the script which use our model to predict the origin of a 5000bp DNA fragment. Model is established on Tensorflow 2.0, which use 6mer frequecy produced by a 5000bp DNA fragment to predict its origin (Plasmid or Chromosome). 
+
+A DNA sequence should be chopped to 5000bp and then KMC3 is used to calculate the 6mer frequency. Each row represents a sequence and each column means a 6mer type. The script model_predict.py can be used to classify the sequences based on the frequency of 6mer, containing 2080 features. The data should be csv format with header and index column. An example to predict on the testdata.csv is below. Generally, prediction of 100 samples cost less than 5 minutes. 
 
 ```
 python model_predict.py testdata.csv
@@ -25,7 +28,7 @@ python model_predict.py testdata.csv
 The testresult was stored in a file called "prediction_result.txt", which showed the probability that one fragment was predicted as plasmid by the model.
 
 ## Training new models
-We also provide a script used to train your own model. For example, `training_data.csv` is your training matrix in csv format (with header and index column), and `training_label.txt` is your label in txt format.
+We also provide a script used to train your own model. For example, `training_data.csv` is your training matrix in csv format (with header and index column), and `training_label.txt` is your label in txt format. Usually, training a dataset containing 10,000 samples cost about 10 minutes.
 
 This command will train your data and get a new model named "trained_model.h5" in your working directory:
 ```
