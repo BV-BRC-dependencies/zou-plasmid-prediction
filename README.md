@@ -3,6 +3,8 @@ This repository contains all the code to build a Machine learning model to diffe
 
 This model is used to predict a sequence origin (plasmid or chromosome) based on the kmer frequency. Typically, we used a 5000 bp sequence and calculate its 6mer frequency, which produces 2080 kmer features. The frequency matrix is fed into the model to predict the sequence origin.
 
+The ID info of plasmid and chromosome (with length >= 5000bp) we used to established the model are listed, namely plasmid_id_5k and plasmid_id_5k in the repo, respectively. All the sequences were downloaded from https://www.bv-brc.org. The three columns of two files are GeneBank Accession NO,Genome Name,and Genome ID in the bv-brc database.
+
 
 ## Prerequisites
 The model requires the installation of Python 3.8, scikit-learn 0.21.3, tensorflow 2.0, pandas 0.24.2, NumPy 1.16.0, and the KMC 3.1.1 tool. KMC3 can be installed based on manual [KMC3](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=kmc&subpage=download). The model could be run on a laptop with 2G gpu, and a tensorflow 2.0 or above should be installed with gpu.
