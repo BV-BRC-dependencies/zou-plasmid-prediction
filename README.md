@@ -39,7 +39,7 @@ To trained a model with your own sequence data:
 ~/bin/KMC3bX/kmc -k6 -ci1 -fa -cs5000 yourfastafile.fa interfile temp/
 ~/bin/KMC3bX/kmc_dump interfile kmerfile
 ```
-2.merge the 6mer frequency of each sequence to a matrix with order in the "kmer_order.csv" file, which get the traning_data.
+2.merge the 6mer frequency of each sequence to a matrix with order in the "kmer_order.csv" file, which get the traning_data. Label the plasmid as 1 and chromosome as 0 to formed the label file. 
 
 3.training your model 
 
