@@ -5,7 +5,7 @@ This model is used to predict a sequence origin (plasmid or chromosome) based on
 
 
 ## Prerequisites
-The model requires the installation of Python 3.8, tensorflow 2.0, pandas 0.24.2, NumPy 1.16.0, and the KMC 3.1.1 tool. KMC3 can be installed based on manual [KMC3](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=kmc&subpage=download). The model could be run on a laptop with 2G gpu, and a tensorflow 2.0 or above should be installed with gpu.
+The model requires the installation of Python 3.8, scikit-learn 0.21.3, tensorflow 2.0, pandas 0.24.2, NumPy 1.16.0, and the KMC 3.1.1 tool. KMC3 can be installed based on manual [KMC3](http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=kmc&subpage=download). The model could be run on a laptop with 2G gpu, and a tensorflow 2.0 or above should be installed with gpu.
 
 ## Installation
 ```
