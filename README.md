@@ -33,6 +33,7 @@ The testresult was stored in a file called "prediction_result.txt", which showed
 We also provide a script used to train your own model. For example, `training_data.csv` is your training matrix in csv format (with header and index column), and `training_label.txt` is your label in txt format. Usually, training a dataset containing 10,000 samples cost about 10 minutes.
 
 To trained a model with your own sequence data:
+
 1.use KMC3 to calculate 6-mer frequency of each sequence.
 ```
 ~/bin/KMC3bX/kmc -k6 -ci1 -fa -cs5000 yourfastafile.fa interfile temp/
@@ -41,6 +42,7 @@ To trained a model with your own sequence data:
 2.merge the 6mer frequency of each sequence to a matrix with order in the "kmer_order.csv" file, which get the traning_data.
 
 3.training your model 
+
 This command will train your data and get a new model named "trained_model.h5" in your working directory:
 ```
 python model_train.py training_data.csv training_label.txt
