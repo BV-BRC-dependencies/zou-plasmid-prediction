@@ -24,7 +24,16 @@ model_predict.py is the script which use our model to predict the origin of a 50
 
 A DNA sequence should be chopped to 5000bp and then KMC3 is used to calculate the 6mer frequency. Each row represents a sequence and each column means a 6mer type. The script model_predict.py can be used to classify the sequences based on the frequency of 6mer, containing 2080 features. The data should be csv format with header and index column. An example to predict on the testdata.csv is below. Generally, prediction of 100 samples cost less than 5 minutes. 
 
+1. clone the repo to your local folder
+
 ```
+git clone https://github.com/Xiaohui-Z/Plasmid_ML.git
+
+```
+2. switch to the Plasmid_ML folder and predict your data. please make sure the two file "scaler.pkl" and "5k6mer_model.h5” in your current working directory. 
+
+```
+cd Plasmid_ML/
 python model_predict.py testdata.csv
 ```
 The testresult was stored in a file called "prediction_result.txt", which showed the probability that one fragment was predicted as plasmid by the model.
