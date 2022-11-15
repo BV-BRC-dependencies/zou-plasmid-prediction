@@ -28,7 +28,6 @@ A DNA sequence should be chopped to 5000bp and then KMC3 is used to calculate th
 
 ```
 git clone https://github.com/Xiaohui-Z/Plasmid_ML.git
-
 ```
 2. switch to the Plasmid_ML folder and predict your data. please make sure the two file "scaler.pkl" and "5k6mer_model.h5” in your current working directory. 
 
