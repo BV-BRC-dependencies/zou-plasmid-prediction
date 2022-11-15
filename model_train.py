@@ -91,7 +91,7 @@ network.compile(optimizer=optimizers.Adam(lr=0.001),
                metrics=['accuracy'])
 
 network.fit(db_train, epochs=400, validation_data=ds_val,
-            steps_per_epoch=x_train.shape[0]//batchsz,
+            steps_per_epoch=1+(x_train.shape[0]//batchsz),
             validation_steps=2, callbacks=[early_stopping,checkpoint])
 
 network.evaluate(db_test)
