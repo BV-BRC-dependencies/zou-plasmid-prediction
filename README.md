@@ -55,3 +55,4 @@ This command will train your data and get a new model named "trained_model.h5" i
 ```
 python model_train.py training_data.csv training_label.txt
 ```
+The template training data and label, namely "training_data.csv" and "training_label.txt" are listed in the repo.
